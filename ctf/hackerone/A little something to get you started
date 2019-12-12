@@ -5,5 +5,7 @@ From <https://ctf.hacker101.com/ctf>
 
 Page structure
 
-	1. <>
-		a. <>
+	1. This is the easiest one. Check the source for the page that opens up. The source mention about "background.png" file 
+	being used.
+		a. Try the same file name in URL http://35.190.155.168/1e63a22c8d/background.png
+		b. Get flag d3136c865183add500512272f74a7e65624b5b797d84341ed253f4aa1ab01ad8
