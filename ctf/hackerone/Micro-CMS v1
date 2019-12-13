@@ -14,6 +14,8 @@ page/edit/<page_num>
 		b. So, what happened to the pages between 3 to 9?
 		c. Try editing all the pages in between e.g. page/edit/3, page/edit/4.......page/edit/9
 		d. One of the page is hidden i.e. page/edit/7 and get flag
+	NOTE: The important learing is to pay attention when page/7 is accessed. It has shown "Forbidden" as compare to "Not Found"
+	for other pages. This is kind of hint that this page is little different than others.
 
 	2. <>
 	3.
