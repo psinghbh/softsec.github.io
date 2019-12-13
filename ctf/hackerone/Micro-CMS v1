@@ -21,6 +21,17 @@ page/edit/<page_num>
 	"Bugs often occur when an input should always be one type and turns out to be another".
 		a. So based on this try every possible character (alphanumeric, special character etc.) in page/* or page/edit/*
 		b. One of the input will be "page/edit/'" and that will give a flag
+	NOTE: This might indicate that there is a possibility of XSS. So let's try more in edit page.
 
-	3.
-	4.
+	3. When editing any page
+		a. Give title field with special character e.g. <title>
+		b. click on Save button. The page will be saved correctly. Nothing happens.
+		c. However, after this when clicked on "Go Home", it shows the alert with flag.
+	NOTE: It shows sometimes the cycle doesn't end a same apge. the complete picture includes multiple pages.
+
+	4.Now things are getting even more weird (read tough). Edit any text area with several XSS options e.g. <button>alert(1)</button> or <button>alert(1)</button> etc.
+		a. You might notice that "<script>" and "</script>" are filtered
+		b. Keep trying other things and also try "<img src="123" onclick="alert(1)">"
+		c. page will be saved, click on image icon. an alert will be generated as expected.
+		d. But still no sign of flag. Now, at this point of time check the source of the page. It shows flag.
+		
