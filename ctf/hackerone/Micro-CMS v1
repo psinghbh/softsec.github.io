@@ -12,8 +12,8 @@ page/edit/<page_num>
 	1. Click on Create a new page (http://35.190.155.168/daa1372179/page/create)
 		a. This will create new page "page/10"
 		b. So, what happened to the pages between 3 to 9?
-		c. Try opening all the pages in between e.g. page/3, page/4.......page/9
-		d. One of the page is hidden i.e. page/7 and give flag "992486fb09f1781ade3d59563da8dbedb965071cecc096dea1b1a76c4d0a12b1"
+		c. Try editing all the pages in between e.g. page/edit/3, page/edit/4.......page/edit/9
+		d. One of the page is hidden i.e. page/edit/7 and get flag "992486fb09f1781ade3d59563da8dbedb965071cecc096dea1b1a76c4d0a12b1"
 
 	2. <>
 	3.
