@@ -14,4 +14,7 @@ add/2
 		b. Click "Check Out"
 		c. Flag is shown
 
-	2.
+	2. Try opening usual pages e.g. index, root, admin etc. and voila! "login" page works
+		a. Try SQL injection but it didn't work out
+		b. Tried XSS, it didn't work out
+		c. Bute force then, so need the help of tools
