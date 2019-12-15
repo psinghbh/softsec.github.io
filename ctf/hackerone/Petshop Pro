@@ -4,7 +4,14 @@ Petshop Pro
 From <https://ctf.hacker101.com/ctf> 
 
 Page structure
+cart/
+checkout
+add/1
+add/2
 
-	1. a
-		a. a
-	NOTE: a
+	1. Click on "Add to Cart" for any item.
+		a. Modify the page element especially "price" of the item.
+		b. Click "Check Out"
+		c. Flag is shown
+
+	2.
