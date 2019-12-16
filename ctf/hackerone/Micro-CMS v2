@@ -1,3 +1,16 @@
+Micro-CMS v1
+-------------
 
+From <https://ctf.hacker101.com/ctf> 
 
-admin' or '1'='1
+Page structure
+home
+page/1
+page/2
+page/create
+page/edit/<page_num>
+
+1. Try pages and "login/" page will work
+  a. By trying you'll come to know that "Username" has SQL injection possible. Normal tries gives "Unknown User" error.
+  However, there is one possible value (admin' or '1'='1) that gives "Invalid password" error
+  b. 
