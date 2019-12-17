@@ -1,20 +1,20 @@
 Petshop Pro
 -----------
 
-From <https://ctf.hacker101.com/ctf> 
-
 Page structure
+--------------
 cart/
 checkout
 add/1
 add/2
 
-	1. Click on "Add to Cart" for any item.
-		a. Modify the page element especially "price" of the item.
-		b. Click "Check Out"
-		c. Flag is shown
+    1. Click on "Add to Cart" for any item.
+        a. Modify the page element especially "price" of the item.
+        b. Click "Check Out"
+        c. Flag is shown
 
-	2. Try opening usual pages e.g. index, root, admin etc. and voila! "login" page works
-		a. Try SQL injection but it didn't work out
-		b. Tried XSS, it didn't work out
-		c. Bute force then, so need the help of tools
+    2. Try opening usual pages e.g. index, root, admin etc. and voila! "login" page works
+        a. Tried various combination of SQL injection on "username" and "password"
+           field using Burp-Intruder but it didn't work out.
+        b. Next step to try XSS, it didn't work out
+        c. Bute force then, so need the help of tools
