@@ -10,7 +10,7 @@ page/2
 page/create
 page/edit/<page_num>
 
-    1. Try pages and "login/" page will work
+    1. Click on "Create a new page" and it goes to "login/" page
       a. By trying you'll come to know that "Username" has SQL injection possible.
          Normal tries gives "Unknown User" error. However, there is one possible
          value (admin' or '1'='1) that gives "Invalid password" error

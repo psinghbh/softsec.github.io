@@ -1,1 +1,15 @@
+Cody's First Blog
+-----------------
 
+From <https://ctf.hacker101.com/ctf> 
+
+Page structure
+
+    1. Since it say that PHP is used, let's try to get php info
+        a. Used below lines, and it gave flag
+            <?php
+                phpinfo();
+            ?>
+
+    2. Check the source of the main page. Shows comment "?page=admin.auth.inc"
+        a. Try this page and actually it works
