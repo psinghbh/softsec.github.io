@@ -32,4 +32,5 @@ Page structure
            gave flag. And at the same time keep checking source of the file.
            That gave another and most coveted flag.
 
-    NOTE: Learning is include() function in PHP and RFI (Remote File Inclusion)
+    NOTE: Learning is include() function in PHP and RFI (Remote File Inclusion).
+          Also LFI (Local File Inclusion)
