@@ -31,3 +31,5 @@ Page structure
         c. Above commands will keep giving information. One of the comment
            gave flag. And at the same time keep checking source of the file.
            That gave another and most coveted flag.
+
+    NOTE: Learning is include() function in PHP and RFI (Remote File Inclusion)
