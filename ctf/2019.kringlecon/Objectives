@@ -1,4 +1,18 @@
-3) Windows Log Analysis: Evaluate Attack Outcome
+OBJECTIVE#0) Talk to Santa in the Quad
+Enter the campus quad and talk to Santa.
+
+OBJECTIVE#1) Find the Turtle Doves
+Find the missing turtle doves.
+
+OBJECTIVE#2) Unredact Threatening Document
+Difficulty: 1
+Someone sent a threatening letter to Elf University. What is the first word in ALL CAPS in the subject line of the letter? Please find the letter in the Quad.
+
+How I solved:
+This was a pdf with some hidden text. It was easy to do ctrl-A, ctrl-C and ctrl-V in notepad.
+It gave the complete text.
+
+OBJECTIVE#3) Windows Log Analysis: Evaluate Attack Outcome
 Difficulty: 1
 We're seeing attacks against the Elf U domain! Using the event log
 data (https://downloads.elfu.org/Security.evtx.zip), identify the user account that
@@ -10,7 +24,7 @@ For every user logon attempt eventID:4648 is generated and with wrong password,
 that attempt was failed with eventID:4625. However, for user supatree, different
 eventIDs are generated e.g. eventID:4776 -> 4672 -> 4624 -> 4634
 
-4) Windows Log Analysis: Determine Attacker Technique
+OBJECTIVE#4) Windows Log Analysis: Determine Attacker Technique
 Difficulty: 2
 Using these normalized Sysmon logs (https://downloads.elfu.org/sysmon-data.json.zip), identify
 the tool the attacker used to retrieve domain password hashes from the lsass.exe process.
@@ -19,7 +33,7 @@ For hints on achieving this objective, please visit Hermey Hall and talk with Su
 Pid of lsass.exe is 3440, and it had only one process as child with pid:3556 i.e. ntdsutil.exe
 ntdsutil.exe
 
-5) Network Log Analysis: Determine Compromised System
+OBJECTIVE#5) Network Log Analysis: Determine Compromised System
 Difficulty: 2
 The attacks don't stop! Can you help identify the IP address of the malware-infected system
 using these Zeek logs (https://downloads.elfu.org/elfu-zeeklogs.zip)? For hints on
@@ -27,7 +41,7 @@ achieving this objective, please visit the Laboratory and talk with Sparkle Redb
 
 192.168.134.130	(this had the max number of connection i.e. 7660)
 
-6) Splunk
+OBJECTIVE#6) Splunk
 Difficulty: 3
 Access https://splunk.elfu.org/ as elf with password elfsocks. What was the message
 for Kent that the adversary embedded in this attack? The SOC folks at that link will

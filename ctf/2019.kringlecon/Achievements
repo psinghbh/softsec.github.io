@@ -1,5 +1,5 @@
 ---------------Done---------------
-MongoDB
+PROBLEM#1 - MongoDB
 From: Holly Evergreen
 MongoDB Documentation - https://docs.mongodb.com/manual/reference/command/listDatabases/#dbcmd.listDatabases
 
@@ -50,7 +50,7 @@ Tried this command on all of the collections. One of that that gave some results
 ---------------Done---------------
 
 ---------------Done---------------
-PowerShell
+PROBLEM#2 - PowerShell
 From: Sparkle Redberry
 SANS' PowerShell Cheat Sheet (https://blogs.sans.org/pen-testing/files/2016/05/PowerShellCheatSheet_v41.pdf)
 
@@ -300,7 +300,7 @@ PS /home/elf> (Invoke-WebRequest -Uri http://localhost:1225/api/output).RawConte
 ---------------Done---------------
 
 ---------------Done---------------
-Linux Path (Linux Path)
+PROBLEM#3 - Linux Path (Linux Path)
 From: SugarPlum Mary
 Green words matter, files must be found, and the terminal's $PATH matters.
 
@@ -380,13 +380,13 @@ Eric Conrad on DeepBlueCLI - https://www.ericconrad.com/2016/09/deepbluecli-powe
 
 
 ---------------Done---------------
-ed Editor Basics (Escape Ed)
+PROBLEM#4 - ed Editor Basics (Escape Ed)
 From: Bushy Evergreen
 Ed Is The Standard Text Editor - http://cs.wellesley.edu/~cs249/Resources/ed_is_the_standard_text_editor.html
 ---------------Done---------------
 
 ---------------Done---------------
-User's Shells (Nyanshell)
+PROBLEM#5 - User's Shells (Nyanshell)
 From: Alabaster Snowball
 On Linux, a user's shell is determined by the contents of /etc/passwd
 
@@ -505,7 +505,7 @@ alabaster_snowball@7fb2241eccd1:~$
 
 
 ---------------Done---------------
-Iptables (smart braces)
+PROBLEM#6 - Iptables (smart braces)
 From: Kent Tinseltooth
 Iptables - https://upcloud.com/community/tutorials/configure-iptables-centos/
 
@@ -622,7 +622,7 @@ elfuuser@0866a92d7a22:~$ Kent TinselTooth: Great, you hardened my IOT Smart Brac
 ---------------Done---------------
 
 ---------------Done---------------
-Frosty Keypad
+PROBLEM#7 - Frosty Keypad
 From: Tangle Coalbox
 One digit is repeated once, it's prime, and you can see which keys were used
 
@@ -633,7 +633,7 @@ Image file is uploaded in github also.
 
 
 ---------------Done---------------
-Graylog
+PROBLEM#8 - Graylog
 From: Pepper Minstix
 Graylog Docs - http://docs.graylog.org/en/3.1/pages/queries.html
 
@@ -781,8 +781,8 @@ look for a sysmon network connection id of 3 with a source of elfu-res-wks2 and
 DestinationHostname of pastebin.com.
 ---------------Done---------------
 
-
-Web App Pen Testing
+---------------Done---------------
+PROBLEM#9 - Web App Pen Testing
 From: Minty Candycane
 Web Apps: A Trailhead - https://youtu.be/0T6-DQtzCgM
 
@@ -810,6 +810,7 @@ Deviant has a great talk on it at this year's Con.
 He even has a collection of key bitting templates for common vendors like Kwikset, Schlage, and Yale.
 
 
+PROBLEM#10 - 
 Ctrl-Shift-J -> find Deviant Ollam, Optical Decoding of Keys | KringleCon 2019
 
 
