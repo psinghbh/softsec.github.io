@@ -1,0 +1,81 @@
+	3) Windows Log Analysis: Evaluate Attack Outcome
+Difficulty: 1
+We're seeing attacks against the Elf U domain! Using the event log data (https://downloads.elfu.org/Security.evtx.zip), identify the user account that the attacker compromised using a password spray attack. Bushy Evergreen is hanging out in the train station and may be able to help you out.
+
+How I solved:
+For every user logon attempt eventID:4648 is generated and with wrong password, that attempt was failed with eventID:4625. However, for user supatree, different eventIDs are generated e.g. eventID:4776 -> 4672 -> 4624 -> 4634
+
+4) Windows Log Analysis: Determine Attacker Technique
+Difficulty: 2
+Using these normalized Sysmon logs (https://downloads.elfu.org/sysmon-data.json.zip), identify the tool the attacker used to retrieve domain password hashes from the lsass.exe process. For hints on achieving this objective, please visit Hermey Hall and talk with SugarPlum Mary.
+
+Pid of lsass.exe is 3440, and it had only one process as child with pid:3556 i.e. ntdsutil.exe
+ntdsutil.exe
+
+5) Network Log Analysis: Determine Compromised System
+Difficulty: 2
+The attacks don't stop! Can you help identify the IP address of the malware-infected system using these Zeek logs (https://downloads.elfu.org/elfu-zeeklogs.zip)? For hints on achieving this objective, please visit the Laboratory and talk with Sparkle Redberry.
+
+192.168.134.130	(this had the max number of connection i.e. 7660)
+
+6) Splunk
+Difficulty: 3
+Access https://splunk.elfu.org/ as elf with password elfsocks. What was the message for Kent that the adversary embedded in this attack? The SOC folks at that link will help you along! For hints on achieving this objective, please visit the Laboratory in Hermey Hall and talk with Prof. Banas.
+
+
+Hi, I'm Dr. Banas, professor of Cheerology at Elf University.
+This term, I'm teaching "HOL 404: The Search for Holiday Cheer in Popular Culture," and I've had quite a shock!
+I was at home enjoying a nice cup of Gløgg when I had a call from Kent, one of my students who interns at the Elf U SOC.
+Kent said that my computer has been hacking other computers on campus and that I needed to fix it ASAP!
+If I don't, he will have to report the incident to the boss of the SOC.
+Apparently, I can find out more information from this website https://splunk.elfu.org/ with the username: elf / Password: elfsocks.
+I don't know anything about computer security. Can you please help me?
+
+
+1. What is the short host name of Professor Banas' computer?	
+
+2. What is the name of the sensitive file that was likely accessed and copied by the attacker? Please provide the fully qualified location of the file. (Example: C:\temp\report.pdf)	
+search query => index=main santa
+C:\Users\cbanas\Documents\Naughty_and_Nice_2019_draft.txt
+
+3. What is the fully-qualified domain name(FQDN) of the command and control(C2) server? (Example: badguy.baddies.com)	
+search query => index=main sourcetype=XmlWinEventLog:Microsoft-Windows-Sysmon/Operational powershell EventCode=3
+144.202.46.214.vultr.com
+
+4. What document is involved with launching the malicious PowerShell code? Please provide just the filename. (Example: results.txt)	
+search query => index=main sourcetype=WinEventLog EventCode=4688
+From the list of interesting fields, choose "New_Process_name" and clicked on the first (and most count) winword.exe (it make sense since we are searching for document). Also rest of them were only OS services. This gave search query as
+search query => index=main sourcetype=WinEventLog EventCode=4688 New_Process_Name="C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\WINWORD.EXE"
+Started looking at events and documents. One of the document "19th Century Holiday Cheer Assignment.docm" worked
+
+5. How many unique email addresses were used to send Holiday Cheer essays to Professor Banas? Please provide the numeric value. (Example: 1)	
+In chat search was given as "index=main sourcetype=stoq | table _time results{}.workers.smtp.to results{}.workers.smtp.from  results{}.workers.smtp.subject results{}.workers.smtp.body | sort - _time". But this was giving to and from both. So, counted all of them and it turns out that the answer is 21.
+
+6.What was the password for the zip archive that contained the suspicious file?
+Use the same search as above "index=main sourcetype=stoq | table _time results{}.workers.smtp.to results{}.workers.smtp.from  results{}.workers.smtp.subject results{}.workers.smtp.body | sort - _time".
+But in the chat it mentioned that "Each element contains the name of the file that stoQ extracted in the 'results->payload_meta->extra_data->filename' field." So modified the search query to include this file name as "index=main sourcetype=stoq | table _time results{}.workers.smtp.to results{}.workers.smtp.from results{}.payload_meta.extra_data.filename results{}.workers.smtp.subject results{}.workers.smtp.body | sort - _time" and by looking at the file and message body gives the password "123456789"
+
+Just by reading all the email body sent to Prof Banas. One of that shows "attached zip file with password 123456789". Tried this password and it worked.
+
+
+7. What email address did the suspicious file come from?
+Now this is easy. Same search query as above and it clearly shows bradly.buttercups@eifu.org
+
+
+
+Main Question
+===========
+In chat it was mentioned (Look in the 'results' array. Each element contains the name of the file that stoQ extracted in the 'results->payload_meta->extra_data->filename' field. And when you find one of interest, use the associated 'results->archivers->filedir->path' field to guide you through the File Archive.) that all the files are present in file archive and to get the path include certian fields in search query
+
+From previous query, added these two fileds adn created query "index=main sourcetype=stoq | table _time results{}.workers.smtp.to results{}.workers.smtp.from results{}.payload_meta.extra_data.filename results{}.workers.smtp.subject results{}.workers.smtp.body results{}.payload_meta.extra_data.filename results{}.archivers.filedir.path"
+
+This shows the file located at /home/ubuntu/archive/c/6/e/1/7/c6e175f5b8048c771b3a3fac5f3295d2032524af. Open this file, the message written there is "Cleaned for your safety. Happy Holidays!
+
+In the real world, This would have been a wonderful artifact for you to investigate, but it had malware in it of course so it's not posted here. Fear not! The core.xml file that was a component of this original macro-enabled Word doc is still in this File Archive thanks to stoQ. Find it and you will be a happy elf :-) 
+"
+
+core.xml has corresponding file at /home/ubuntu/archive/f/f/1/e/a/ff1ea6f13be3faabd0da728f514deb7fe3577cc4. Open this file nad it contains following message
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><dc:title>Holiday Cheer Assignment</dc:title><dc:subject>19th Century Cheer</dc:subject><dc:creator>Bradly Buttercups</dc:creator><cp:keywords></cp:keywords><dc:description>Kent you are so unfair. And we were going to make you the king of the Winter Carnival.</dc:description><cp:lastModifiedBy>Tim Edwards</cp:lastModifiedBy><cp:revision>4</cp:revision><dcterms:created xsi:type="dcterms:W3CDTF">2019-11-19T14:54:00Z</dcterms:created><dcterms:modified xsi:type="dcterms:W3CDTF">2019-11-19T17:50:00Z</dcterms:modified><cp:category></cp:category></cp:coreProperties>
+

@@ -1,0 +1,455 @@
+---------------Done---------------
+MongoDB
+From: Holly Evergreen
+MongoDB Documentation - https://docs.mongodb.com/manual/reference/command/listDatabases/#dbcmd.listDatabases
+
+Hey! It's me, Holly Evergreen! My teacher has been locked out of the quiz database and can't remember the right solution.
+Without access to the answer, none of our quizzes will get graded.
+Can we help get back in to find that solution?
+I tried lsof -i, but that tool doesn't seem to be installed.
+I think there's a tool like ps that'll help too. What are the flags I need?
+Either way, you'll need to know a teensy bit of Mongo once you're in.
+Pretty please find us the solution to the quiz!
+
+Hey! It's me, Holly Evergreen! My teacher has been locked out of the quiz database and can't remember the right solution.
+Without access to the answer, none of our quizzes will get graded.
+Can we help get back in to find that solution?
+I tried lsof -i, but that tool doesn't seem to be installed.
+I think there's a tool like ps that'll help too. What are the flags I need?
+Either way, you'll need to know a teensy bit of Mongo once you're in.
+Pretty please find us the solution to the quiz!
+
+
+elf@50bb2734f7c5:~$ sudo -l
+User elf may run the following commands on 50bb2734f7c5:
+    (mongo) NOPASSWD: /usr/bin/mongod --quiet --fork --port 12121 --bind_ip 127.0.0.1
+        --logpath\=/tmp/mongo.log
+    (root) SETENV: NOPASSWD: /usr/bin/python /updater.py
+
+elf@50bb2734f7c5:~$ ps -ef | grep mongo
+mongo        9     1  1 15:51 ?        00:00:01 /usr/bin/mongod --quiet --fork --port 12121 --bind_ip 127.0.0.1 --logpath=/tmp/mongo.log
+elf         51     1  0 15:53 pts/0    00:00:00 grep --color=auto mongo
+elf@50bb2734f7c5:~$ which mongo
+/usr/bin/mongo
+elf@50bb2734f7c5:~$ mongo localhost:12121
+> show dbs
+admin  0.000GB
+elfu   0.000GB
+local  0.000GB
+test   0.000GB
+> use elfu
+switched to db elfu
+> show collections
+bait
+chum
+line
+metadata
+solution
+system.js
+tackle
+tincan
+> db.solution.find()
+{ "_id" : "You did good! Just run the command between the stars: ** db.loadServerScripts();displaySolution(); **" }
+> db.loadServerScripts();displaySolution();
+---------------Done---------------
+
+---------------Done---------------
+PowerShell
+From: Sparkle Redberry
+SANS' PowerShell Cheat Sheet (https://blogs.sans.org/pen-testing/files/2016/05/PowerShellCheatSheet_v41.pdf)
+
+Talk
+I'm Sparkle Redberry and Imma chargin' my laser!
+Problem is: the settings are off.
+Do you know any PowerShell?
+It'd be GREAT if you could hop in and recalibrate this thing.
+It spreads holiday cheer across the Earth ...
+... when it's working!
+
+Start Problem
+
+Type exit to exit PowerShell.
+
+PowerShell 6.2.3
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+https://aka.ms/pscore6-docs
+Type 'help' to get help.
+
+🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲
+🗲                                                                                🗲
+🗲 Elf University Student Research Terminal - Christmas Cheer Laser Project       🗲
+🗲 ------------------------------------------------------------------------------ 🗲
+🗲 The research department at Elf University is currently working on a top-secret 🗲
+🗲 Laser which shoots laser beams of Christmas cheer at a range of hundreds of    🗲
+🗲 miles. The student research team was successfully able to tweak the laser to   🗲
+🗲 JUST the right settings to achieve 5 Mega-Jollies per liter of laser output.   🗲
+🗲 Unfortunately, someone broke into the research terminal, changed the laser     🗲
+🗲 settings through the Web API and left a note behind at /home/callingcard.txt.  🗲
+🗲 Read the calling card and follow the clues to find the correct laser Settings. 🗲
+🗲 Apply these correct settings to the laser using it's Web API to achieve laser  🗲
+🗲 output of 5 Mega-Jollies per liter.                                            🗲
+🗲                                                                                🗲
+🗲 Use (Invoke-WebRequest -Uri http://localhost:1225/).RawContent for more info.  🗲
+🗲                                                                                🗲
+🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲🗲 
+
+
+PS /home/elf> Get-Content /home/callingcard.txt
+What's become of your dear laser?
+Fa la la la la, la la la la
+Seems you can't now seem to raise her!
+Fa la la la la, la la la la
+Could commands hold riddles in hist'ry?
+Fa la la la la, la la la la
+Nay! You'll ever suffer myst'ry!
+Fa la la la la, la la la la
+PS /home/elf> 
+
+PS /home/elf> h
+  Id CommandLine
+  -- -----------
+   1 Get-Help -Name Get-Process 
+   2 Get-Help -Name Get-* 
+   3 Set-ExecutionPolicy Unrestricted 
+   4 Get-Service | ConvertTo-HTML -Property Name, Status > C:\services.htm 
+   5 Get-Service | Export-CSV c:\service.csv 
+   6 Get-Service | Select-Object Name, Status | Export-CSV c:\service.csv 
+   7 (Invoke-WebRequest http://127.0.0.1:1225/api/angle?val=65.5).RawContent
+   8 Get-EventLog -Log "Application" 
+   9 I have many name=value variables that I share to applications system wide. At a command I will reveal my secrets once you Get my Child Items.
+  10 help
+
+PS /home/elf> (Invoke-WebRequest http://127.0.0.1:1225/api/angle?val=65.5).RawContent
+HTTP/1.0 200 OK                                                                                   
+Server: Werkzeug/0.16.0                                                                           
+Server: Python/3.6.9                                                                              
+Date: Fri, 27 Dec 2019 09:21:52 GMT                                                               
+Content-Type: text/html; charset=utf-8
+Content-Length: 77
+
+Updated Mirror Angle - Check /api/output if 5 Mega-Jollies per liter reached.
+
+PS /home/elf> (Invoke-WebRequest -Uri http://localhost:1225/).RawContent
+HTTP/1.0 200 OK                                                                                   
+Server: Werkzeug/0.16.0                                                                           
+Server: Python/3.6.9                                                                              
+Content-Type: text/html; charset=utf-8
+Content-Length: 860
+
+<html>
+<body>
+<pre>
+----------------------------------------------------
+Christmas Cheer Laser Project Web API
+----------------------------------------------------
+GET http://localhost:1225/api/on
+GET http://localhost:1225/api/off
+
+Check the current Mega-Jollies of laser output
+GET http://localhost:1225/api/output
+
+Change the lense refraction value (1.0 - 2.0):
+GET http://localhost:1225/api/refraction?val=1.0
+
+GET http://localhost:1225/api/temperature?val=-10
+
+Change the mirror angle value (0 - 359):
+GET http://localhost:1225/api/angle?val=45.1
+
+Change gaseous elements mixture:
+POST http://localhost:1225/api/gas
+POST BODY EXAMPLE (gas mixture percentages):
+O=5&H=5&He=5&N=5&Ne=20&Ar=10&Xe=10&F=20&Kr=10&Rn=10
+</pre>
+</body>
+</html>
+
+PS /home/elf> (Invoke-WebRequest -Uri http://localhost:1225/api/refraction?val=1.0 -Method GET).RawContent
+PS /home/elf> (Invoke-WebRequest -Uri http://localhost:1225/api/temperature?val=-10 -Method GET).RawContent
+PS /home/elf> (Invoke-WebRequest -Uri http://localhost:1225/api/angle?val=45.1 -Method GET).RawContent       
+
+
+$Body = @{
+O=5
+H=5
+He=5
+N=5
+Ne=20
+Ar=10
+Xe=10
+F=20
+Kr=10
+Rn=10
+}
+
+$Body = @{
+O='5'
+H='5'
+He='5'
+N='5'
+Ne='20'
+Ar='10'
+Xe='10'
+F='20'
+Kr='10'
+Rn='10'
+}
+
+(Invoke-WebRequest  http://localhost:1225/api/gas -Method POST -Body $Body).RawContent
+
+
+//going back to step#9 in help command
+PS /home/elf> Get-ChildItem Env:* | Select-Object Value
+
+Value
+-----
+false
+en_US.UTF-8
+laserterminal
+/var/mail/elf
+laserterminal
+en_US.UTF-8
+elf
+/home/elf/elf
+/home/elf
+a6e1be0d-4ded-4727-9160-d5a2cdb0fbdf
+/opt/microsoft/powershell/6:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+/bin/su
+Squeezed and compressed I am hidden away. Expand me from my prison and I will show you the way. Recurse through all /etc and Sort on my LastWriteTime to reveal im the newest of all.
+elf
+/var/cache/microsoft/powershell/PSModuleAnalysisCache/ModuleAnalysisCache
+xterm
+1
+5ff2894c232d
+/home/elf/.local/share/powershell/Modules:/usr/local/share/powershell/Modules:/opt/microsoft/powershell/6/Modules
+elf
+elf
+/home/elf
+
+Get-ChildItem -Path /etc -Recurse | Sort-Object LastWriteTime
+cd 
+New-Item -ItemType directory forArchive
+Expand-Archive -Path /etc/apt/archive -DestinationPath /home/elf/forArchive
+/home/elf/forArchive/refraction
+PS /home/elf/forArchive/refraction> Get-Content ./riddle
+Very shallow am I in the depths of your elf home. You can find my entity by using my md5 identity:25520151A320B5B0D21561F92C8F6224
+
+PS /home/elf/forArchive/refraction> chmod +x ./runme.elf
+PS /home/elf/forArchive/refraction> ./runme.elf
+refraction?val=1.867
+PS /home/elf> Get-ChildItem -R -File | Foreach {Get-FileHash -Algorithm MD5 $_.fullname} | Where-Object {$_.Hash -eq '25520151A320B5B0D21561F92C8F6224'}
+PS /home/elf> cd /home/elf/depths/produce/            
+PS /home/elf/depths/produce> Get-Content ./thhy5hll.txt
+temperature?val=-33.5
+I am one of many thousand similar txt's contained within the deepest of /home/elf/depths. Finding me will give you the most strength but doing so will require Piping all the FullName's to Sort Length.
+PS /home/elf/depths/produce> 
+
+PS /home/elf> Get-ChildItem -R -File | select-object FullName, @{Name="Nlength";Expression={$_.FullName.Length}} | sort-object Nlength | select -last 1 | Format-List
+FullName :/home/elf/depths/larger/cloud/behavior/beauty/enemy/produce/age/chair/unknown/escape/vote/long/writer/behind/ahead/thin/occasionally/explore/tape/wherever/practical/therefore/cool/plate/ice/play/truth/potatoes/beauty/fourth/careful/dawn/adult/either/burn/end
+/accurate/rubbed/cake/main/she/threw/eager/trip/to/soon/think/fall/is/greatest/become/
+accident/labor/sail/dropped/fox/0jhj5xz6.txt
+
+Nlength  : 388
+
+rew/eager/trip/to/soon/think/fall/is/greatest/become/accident/labor/sail/dropped/fox> Get-Content ./0jhj5xz6.txt
+Get process information to include Username identification. Stop Process to show me you're skilled and in this order they must be killed:
+bushy
+alabaster
+minty
+holly
+Do this for me and then you /shall/see .
+
+PS /home/elf> Get-Process -IncludeUserName
+
+     WS(M)   CPU(s)      Id UserName                       ProcessName
+     -----   ------      -- --------                       -----------
+     28.69     0.94       6 root                           CheerLaserServi
+    127.21    10.33      31 elf                            elf
+      3.32     0.03       1 root                           init
+      0.80     0.00      23 bushy                          sleep
+      0.86     0.00      26 alabaster                      sleep
+      0.76     0.00      28 minty                          sleep
+      0.73     0.00      29 holly                          sleep
+      3.53     0.00      30 root                           su
+
+PS /home/elf> Stop-Process -id 23
+PS /home/elf> Stop-Process -id 26
+PS /home/elf> Stop-Process -id 28
+PS /home/elf> Stop-Process -id 29
+
+PS /home/elf> cd /shall
+PS /shall> Gc see
+Get the .xml children of /etc - an event log to be found. Group all .Id's and the last thing will be in the Properties of the lonely unique event Id.
+
+PS /shall> cd /etc
+PS /etc> Get-ChildItem -R /etc -include *.xml -ErrorAction 'SilentlyContinue'    
+
+PS /etc> gc /etc/systemd/system/timers.target.wants/EventLog.xml | Select-String -Pattern '<I32 N="id"' | Group-Object | Select-Object -Property Count, Name | Sort-Object -Property Count -Descending
+
+PS /etc> gc /etc/systemd/system/timers.target.wants/EventLog.xml | Select-String -Pattern '<I32 N="id">1' -Context 20,200
+                <S N="Value">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -c 
+"`$correct_gases_postbody = @{`n    O=6`n    H=7`n    He=3`n    N=4`n    Ne=22`n    Ar=11`n    
+Xe=10`n    F=20`n    Kr=8`n    Rn=9`n}`n"</S>
+
+
+PS /home/elf> (Invoke-WebRequest -Uri http://localhost:1225/api/off).RawContent
+PS /home/elf> (Invoke-WebRequest -Uri http://localhost:1225/api/refraction?val=1.867).RawContent
+PS /home/elf> (Invoke-WebRequest -Uri http://localhost:1225/api/temperature?val=-33.5).RawContent
+PS /home/elf> (Invoke-WebRequest -Uri http://localhost:1225/api/angle?val=65.5).RawContent
+PS /home/elf> $Body = @{O=6;H=7;He=3;N=4;Ne=22;Ar=11;Xe=10;F=20;Kr=8;Rn=9;}
+PS /home/elf> (Invoke-WebRequest -Uri http://localhost:1225/api/gas -Method POST -Body $Body).RawContent
+PS /home/elf> (Invoke-WebRequest -Uri http://localhost:1225/api/on).RawContent
+PS /home/elf> (Invoke-WebRequest -Uri http://localhost:1225/api/output).RawContent
+---------------Done---------------
+
+---------------Done---------------
+Linux Path (Linux Path)
+From: SugarPlum Mary
+Green words matter, files must be found, and the terminal's $PATH matters.
+
+Oh there they are! Now I can delete them. Thanks!
+Have you tried the Sysmon and EQL challenge?
+If you aren't familiar with Sysmon, Carlos Perez has some great info about it.
+Haven't heard of the Event Query Language?
+Check out some of Ross Wolf's (https://www.endgame.com/our-experts/ross-wolf) work on EQL or that blog post by Josh Wright in your badge.
+
+Sysmon
+From: SugarPlum Mary
+Sysmon By Carlos Perez - https://www.darkoperator.com/blog/2014/8/8/sysinternals-sysmon
+
+Event Query Language
+From: SugarPlum Mary
+EQL Threat Hunting - https://pen-testing.sans.org/blog/2019/12/10/eql-threat-hunting/
+
+
+sudo -l
+chattr
+lsattr
+---------------Done---------------
+
+Deep Blue CLI on Github
+From: Bushy Evergreen
+Github page for DeepBlueCLI - https://github.com/sans-blue-team/DeepBlueCLI
+
+Deep Blue CLI Posting
+From: Bushy Evergreen
+Eric Conrad on DeepBlueCLI - https://www.ericconrad.com/2016/09/deepbluecli-powershell-module-for-hunt.html
+
+
+---------------Done---------------
+ed Editor Basics (Escape Ed)
+From: Bushy Evergreen
+Ed Is The Standard Text Editor - http://cs.wellesley.edu/~cs249/Resources/ed_is_the_standard_text_editor.html
+---------------Done---------------
+
+---------------Done---------------
+User's Shells (Nyanshell)
+From: Alabaster Snowball
+On Linux, a user's shell is determined by the contents of /etc/passwd
+
+Chatter? (Nyanshell)
+From: Alabaster Snowball
+sudo -l says I can run a command as root. What does it do?
+---------------Done---------------
+
+
+---------------Done---------------
+Iptables (smart braces)
+From: Kent Tinseltooth
+Iptables - https://upcloud.com/community/tutorials/configure-iptables-centos/
+
+1. Set the default policies to DROP for the INPUT, FORWARD, and OUTPUT chains.
+sudo iptables -P INPUT DROP
+sudo iptables -P FORWARD DROP
+sudo iptables -P OUTPUT DROP    (// This is for adding new rule, it doesn't change default policy -> sudo iptables -A OUTPUT -j DROP)
+
+2. Create a rule to ACCEPT all connections that are ESTABLISHED,RELATED on the INPUT and the OUTPUT chains.
+sudo iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+sudo iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+3. Create a rule to ACCEPT only remote source IP address 172.19.0.225 to access the local SSH server (on port 22).
+sudo iptables -A INPUT -s 172.19.0.225 -p tcp --dport 22 -j ACCEPT
+
+4. Create a rule to ACCEPT any source IP to the local TCP services on ports 21 and 80.
+sudo iptables -A INPUT -p tcp --dport 21 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+
+5. Create a rule to ACCEPT all OUTPUT traffic with a destination TCP port of 80.
+sudo iptables -A OUTPUT -p tcp --dport 80 -j ACCEPT
+
+6. Create a rule applied to the INPUT chain to ACCEPT all traffic from the lo interface.
+sudo iptables -A INPUT -i lo -j ACCEPT
+---------------Done---------------
+
+---------------Done---------------
+Frosty Keypad
+From: Tangle Coalbox
+One digit is repeated once, it's prime, and you can see which keys were used
+
+Image file is uploaded in github also.
+
+7331
+---------------Done---------------
+
+
+---------------Done---------------
+Graylog
+From: Pepper Minstix
+Graylog Docs - http://docs.graylog.org/en/3.1/pages/queries.html
+
+Event IDs and Sysmon
+From: Pepper Minstix
+(Events and Sysmon)
+
+It's me - Pepper Minstix.
+Normally I'm jollier, but this Graylog has me a bit mystified.
+Have you used Graylog before? It is a log management system based on Elasticsearch, MongoDB, and Scala.
+Some Elf U computers were hacked, and I've been tasked with performing incident response.
+Can you help me fill out the incident response report using our instance of Graylog?
+
+It's probably helpful if you know a few things about Graylog.
+Event IDs and Sysmon are important too. Have you spent time with those?
+Don't worry - I'm sure you can figure this all out for me!
+
+Click on the All messages Link to access the Graylog search interface!
+Make sure you are searching in all messages!
+
+The Elf U Graylog server has an integrated incident response reporting system. Just mouse-over the box in the lower-right corner.
+Login with the username elfustudent and password elfustudent.
+
+
+cmd.exe /c "sc query type= service  "
+cmd.exe /c "Get-Service "
+---------------Done---------------
+
+
+Web App Pen Testing
+From: Minty Candycane
+Web Apps: A Trailhead - https://youtu.be/0T6-DQtzCgM
+
+
+Hi! I'm Minty Candycane!
+I just LOVE this old game!
+I found it on a 5 1/4" floppy in the attic.
+You should give it a go!
+If you get stuck at all, check out this year's talks.
+One is about web application penetration testing.
+Good luck, and don't get dysentery!
+
+After basic setup, notice that game is cover the distance. And we can manually change distance. I directly changed it to 7900, and remaining covered by game button "Go"
+hhc://trail.hhc/trail/?difficulty=0&distance=7900&money=1000&pace=0&curmonth=7&curday=4&reindeer=6&runners=12&ammo=100&meds=20&food=376&name0=Mildred&health0=100&cond0=0&causeofdeath0=&deathday0=0&deathmonth0=0&name1=Anna&health1=100&cond1=0&causeofdeath1=&deathday1=0&deathmonth1=0&name2=Sally&health2=100&cond2=0&causeofdeath2=&deathday2=0&deathmonth2=0&name3=Chris&health3=100&cond3=0&causeofdeath3=&deathday3=0&deathmonth3=0
+---------------Done---------------
+
+After coming out talked to Minty again
+You made it - congrats!
+Have you played with the key grinder in my room? Check it out!
+It turns out: if you have a good image of a key, you can physically copy it.
+Maybe you'll see someone hopping around with a key here on campus.
+Sometimes you can find it in the Network tab of the browser console.
+Deviant has a great talk on it at this year's Con.
+He even has a collection of key bitting templates for common vendors like Kwikset, Schlage, and Yale.
+
+
+Ctrl-Shift-J -> find Deviant Ollam, Optical Decoding of Keys | KringleCon 2019
+
