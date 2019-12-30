@@ -1,0 +1,1 @@
+Build a program that takes the above program text as input and extracts from it the words "hello, world" - thus generating the same output that the C program would if it were executed. Your solution does not need to work for arbitrary C programs, only for this one.

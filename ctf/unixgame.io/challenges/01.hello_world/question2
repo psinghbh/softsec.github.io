@@ -1,0 +1,1 @@
+Extract only Ken Thompson and Dennis Ritchie's last names. Hint: look at Thompson and Ritchie's names in the list. What's special about the position of these lines in the file? Can you find a command that lets you get just those lines?

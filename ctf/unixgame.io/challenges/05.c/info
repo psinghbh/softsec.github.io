@@ -1,0 +1,11 @@
+The C Programming Language
+The C programming language was designed by Dennis Ritchie at Bell Labs. The UNIX kernel was originally written in assembler, but was later rewritten in C.
+
+Photo of the cover of the C Programming Language book
+You are given the following text file, containing the code of the venerable "hello world" C program. This program prints the words "hello, world":
+
+main()
+{
+    printf("hello, world\n");
+}
+The first person to implement the above program was Brian W. Kernighan, who used it as the very first example of a C program in the C Programming Language book, also known as the "K&R book" or the "C Bible". It has since become tradition to introduce novice programmers to a new programming language through "hello, world" programs.

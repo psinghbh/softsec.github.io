@@ -1,0 +1,6 @@
+Create a table describing how many captures were made by each type of piece (king, queen, rook, bishop or knight) in this game by Belle, not counting captures made by pawns. The output format must be a number followed by K, Q, R, B or N to denote each type, one line per piece, sorted in descending order, for example:
+
+4 Q
+2 B
+1 R
+

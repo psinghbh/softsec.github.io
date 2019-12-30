@@ -1,0 +1,4 @@
+Count how many times each first name appears in the list and sort the names by how many times they occur in the file, starting with the most common name. The first line should look like this:
+
+   3 Joe
+Hint: carefully study the uniq -c command. To make it work correctly, you'll first need to combine it with another command.

@@ -1,0 +1,8 @@
+Question#1:
+cat input.txt | cut -d ' ' -f 2 | sort
+
+Question#2:
+cat input.txt | head -n 2 | cut -d ' ' -f 2
+
+Question#3:
+cat input.txt | cut -d ' ' -f 1 | sort | uniq -c | sort -r
