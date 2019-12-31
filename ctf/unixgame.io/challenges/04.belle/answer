@@ -1,0 +1,16 @@
+Question#1
+cat input.txt | fmt -w1 | grep '\.' | wc -l
+
+Question#2
+cat input.txt | fmt -w1 | grep 'x' | grep '\.' | wc -l
+
+Question#3
+cat input.txt | fmt -w1 | grep 'x' | grep '\.' | cut -d '.' -f 2 | grep -v '[KQRBN]' | wc -l
+
+Question#4
+cat input.txt | fmt -w1 | grep 'x' | grep '\.' | cut -d '.' -f 2 | grep '[KQRBN]' | cut -c 1-1 | sort | uniq -c | sort -nr
+
+Question#5
+cat input.txt | fmt -w1 | grep 'x' | grep '\.' | cut -d '.' -f 2 | cut -c 1-1 | tr '[a-z]' 'P' | sort | uniq -c | sort -nr
+
+Question#6
