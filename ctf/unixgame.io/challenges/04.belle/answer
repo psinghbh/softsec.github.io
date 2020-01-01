@@ -14,3 +14,4 @@ Question#5
 cat input.txt | fmt -w1 | grep 'x' | grep '\.' | cut -d '.' -f 2 | cut -c 1-1 | tr '[a-z]' 'P' | sort | uniq -c | sort -nr
 
 Question#6
+cat input.txt | fmt -w1 | grep '\.' | cut -d '.' -f 2 | cut -c 1-1 | tr '[a-z]' 'P' | sort | uniq | tail -n 3 | sed 2d | sed 2d
