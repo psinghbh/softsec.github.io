@@ -1,0 +1,2 @@
+Question#1
+cat input.txt | grep 'print' | cut -d '\"' -f 2 | cut -c 1-12

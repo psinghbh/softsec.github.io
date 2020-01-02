@@ -1,0 +1,2 @@
+Question#1
+cat input.txt | awk '{print \$2, \$0}' | sort -nr | cut -d ' ' -f 2

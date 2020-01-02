@@ -1,0 +1,8 @@
+You are given a file with two columns: the names of different bodies in the solar
+system, and their gravitational pull (in m/s^2).
+
+Can you order the bodies by how easy it would be to land on them in Thompson's Space
+Travel game when playing at the highest simulation scale (i.e. fully zoomed out)?
+
+Your solution file should contain just a single column with the names of
+planets, in the correct order.
