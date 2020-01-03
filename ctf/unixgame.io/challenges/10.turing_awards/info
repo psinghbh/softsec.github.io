@@ -1,0 +1,20 @@
+The Turing Award
+The ACM A. M. Turing Award is an annual prize given by the Association for Computing
+Machinery (ACM) to an individual "who has made lasting contributions of a technical
+nature to the computing community". The Turing Award is generally recognized as the
+highest distinction in computer science and the "Nobel Prize of computing."
+
+Ken Thompson and Dennis Ritchie received the Turing Award in 1983 "for their
+development of generic operating systems theory and specifically for the implementation
+of the UNIX operating system.".
+
+The table in the text file contains the list of all Turing awards with their
+affiliations at the time of the award (among other info).
+
+First 4 lines:
+
+Year    Name    Gender    Citizenship    Second
+Citizenship    Born    Affiliation at the time of the award
+2018    Yoshua    Bengio    Male    Canada         1964    University of Montreal, Canada, Mila (Quebec's Artificial Intelligence Institute) and IVADO (the Institute for Data Valorization)
+2018    Geoffrey    Hinton    Male    Canada         1947    Google, Vector Institute and University of Toronto, Canada
+2018    Yann    LeCun    Male    France         1960    New York University, USA, and Facebook

@@ -1,0 +1,7 @@
+Question#1
+cat input.txt | sed 1d | grep 'Bell' | cut -f 2 | wc -l
+
+Question#2
+cat input.txt | sed 1d | grep 'Bell' | cut -f 2
+
+Question#3

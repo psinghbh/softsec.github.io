@@ -1,0 +1,8 @@
+Question#1
+cat input.txt | cut -f 1 | grep 'AT&T' | wc -l
+
+Question#2
+cat input.txt | cut -f 2 | sort -n | uniq -c | sort -nr | head -n 1 | fmt -w1 | tail -n 1
+
+Question#3
+cat input.txt | cut -f 4 | sort -n | cut -c 3-3 | uniq | sed s/\$/'0s'/

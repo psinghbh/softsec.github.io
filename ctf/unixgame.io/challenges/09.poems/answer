@@ -1,0 +1,20 @@
+Question#1
+
+Question#2
+cat input.txt | cut -c 1-1 | tr -d '\n'
+
+Question#3
+cat input.txt | cut -c 1-2 | tr -d '\n'
+
+Question#4
+
+Question#5
+
+Question#6
+
+Question#7
+
+Question#8
+
+Question#9
+

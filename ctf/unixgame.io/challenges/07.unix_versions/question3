@@ -1,0 +1,8 @@
+Print a list of all the decades in which a unix version was released.
+
+Expected output:
+
+60s
+70s
+80s
+90s

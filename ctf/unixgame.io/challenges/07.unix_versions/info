@@ -1,0 +1,7 @@
+The photo above was described by Ritchie (https://www.bell-labs.com/usr/dmr/www/picture.html)
+as "an amusing photo" that shows Ken (sitting) and Ritchie (standing) along with
+a collection of hardware from various computer systems.
+
+In this challenge you are given a text file containing a list of some notable UNIX releases.
+
+Each line consists of four TAB-separated fields: release name, target machine, period and year.

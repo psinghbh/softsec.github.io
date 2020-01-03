@@ -1,0 +1,13 @@
+Question#1
+cat input.txt | fmt -w1 | grep 1969 | wc -l
+
+Question#2
+cat input.txt | grep 'Bell' | awk 'length <= 45' | cut -d ',' -f 2
+
+Question#3
+cat input.txt | grep '(' | cut -d '(' -f 2 | cut -d ')' -f 1 | head -n 1
+
+Question#4
+
+Question#5
+
