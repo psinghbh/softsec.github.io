@@ -1,9 +1,14 @@
 # softsec
 
-# CTF Challenges
-## 2019
-### 2019 Kringlecon
-Find all the details including write-up for challenges can be found at https://github.com/psinghbh/softsec.github.io/tree/master/ctf/2019.kringlecon
-
 # Table-of-Content
-<p><a href="https://psinghbh.github.io/softsec.github.io/ctf/">CTFs</a></p>
+<ul>
+  <li><a href="https://psinghbh.github.io/softsec.github.io/ctf/">CTFs</a></li>
+    <ul>
+      <li><a href="https://github.com/psinghbh/softsec.github.io/ctf/2019.kringlecon/">2019.kringlecon write-up</a></li>
+      <li><a href="https://psinghbh.github.io/softsec.github.io/ctf/">Hackerone</a></li>
+    </ul>
+  <li>Crypto</li>
+  <li>SQL Injection</li>
+  <li>Sessions/Presentations</li>
+  <li>XSS</li>
+</ul>
