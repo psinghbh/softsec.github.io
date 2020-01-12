@@ -2,6 +2,7 @@
 
 # Table-of-Content
 <ul>
+  <li><a href="https://psinghbh.github.io/softsec.github.io/">Home Page</a></li>
   <li><a href="https://github.com/psinghbh/softsec.github.io/tree/master/ctf">CTFs</a></li>
     <ul>
       <li><a href="https://github.com/psinghbh/softsec.github.io/tree/master/ctf/2019.kringlecon/">2019.kringlecon write-up</a></li>
