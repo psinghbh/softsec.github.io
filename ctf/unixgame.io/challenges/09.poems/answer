@@ -1,4 +1,5 @@
 Question#1
+cat input.txt | fmt -w1 | grep '[A-Z]' | tr '[a-z]' '\n' | grep '[A-Z]' | tr -d '\n' | cut -c 1-4
 
 Question#2
 cat input.txt | cut -c 1-1 | tr -d '\n'
@@ -12,10 +13,13 @@ cat input.txt | fmt -w1 | grep '\"' | sed 4d | cut -d '\"' -f 2 | tr -d '\n'
 Question#5
 
 Question#6
+cat input.txt | fmt -w1 | grep '[A-Z]' | sed 1d | sed 3d | sed 3d | tr '[a-z]' '\n' | grep '[A-Z]' | sed 3d | tr -c '[A-Z]' '\n' | tr -d '\n'
 
 Question#7
+cat input.txt | sed 2d | sed 2d | fmt -w1 | grep '[A-Z]' | tr -c '[A-Z]' '\n' | tr -d '\n'
 
 Question#8
+cat input.txt | tr -c '[a-z][A-Z]' '\n' | grep '[A-Z]' | sed 1d | sed 2d | sed 3d | sed 4d | tr -c '[A-Z]' '\n' | tr -d '\n'
 
 Question#9
-
+cat input.txt | tr -c '[a-z][A-Z]' '\n' | grep '[A-Z]' | sed 1d | sed 1d | sed 2d | sed 3d | sed 5d | tr -c '[A-Z]' '\n' | tr -d '\n'
