@@ -1,0 +1,5 @@
+Your task is to transform this list of instructions such that if the snake
+follows the new instructions top to bottom, it ends on the location of the apple.
+
+Hint: you can delete instructions by removing lines, copy instructions by duplicating
+lines, and rearrange instructions by swapping lines.

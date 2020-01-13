@@ -7,6 +7,7 @@ Question#3
 cat input.txt | cut -c 1-2 | tr -d '\n'
 
 Question#4
+cat input.txt | fmt -w1 | grep '\"' | sed 4d | cut -d '\"' -f 2 | tr -d '\n'
 
 Question#5
 

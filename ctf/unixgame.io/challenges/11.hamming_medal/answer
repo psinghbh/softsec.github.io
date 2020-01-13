@@ -1,0 +1,5 @@
+Question#1
+cat input.txt | grep 'UNIX' | cut -f 1
+
+Question#2
+cat input.txt | cut -f 2 | cut -d ' ' -f 1 | sort | uniq -c | sort -nr | head -n 1 | fmt -w1 | sed 1d
