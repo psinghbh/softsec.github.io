@@ -9,3 +9,8 @@
   * [Sessions/Presentations](https://github.com/psinghbh/softsec.github.io/tree/master/sessions)
   * [SQL Injection](https://github.com/psinghbh/softsec.github.io/tree/master/SQL%20Injection)
   * [XSS](https://github.com/psinghbh/softsec.github.io/tree/master/XSS)
+
+#Web-App Test
+##Information Gathering
+First thing first! Collecting all the information you can. To start have a look at
+  * [DNSdumpster](https://dnsdumpster.com/). This also provides the domain map.
