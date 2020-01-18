@@ -12,5 +12,7 @@
 
 # Web-App Test
 ## Information Gathering
-First thing first! Collecting all the information you can. To start have a look at
+First thing first! **Do not do it unless you are authorized and have permission to do so.**
+Collecting all the information you can. To start have a look at
   * [DNSdumpster](https://dnsdumpster.com/). This also provides the domain map.
+  * [Shodan](https://shodan.io/)
